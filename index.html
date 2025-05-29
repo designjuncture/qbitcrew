@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>No Code Event</title>
+
+  <!-- ✅ Google Fonts: Elegant Serif Alternatives -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'EB Garamond', serif;
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+
+    /* New Hero Section Styles */
+    .hero-section {
+      text-align: center;
+      padding: 60px 30px;
+      background: white;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 72px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: 28px;
+      font-family: 'EB Garamond', serif;
+      color: #666;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .highlight-green {
+      color: #c9f25d;
+      background: #c9f25d;
+      color: #000;
+      padding: 0 8px;
+      border-radius: 4px;
+    }
+
+    .countdown-container {
+      background: #000;
+      color: #c9f25d;
+      padding: 20px 40px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 30px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    .register-prompt {
+      font-size: 32px;
+      font-family: 'EB Garamond', serif;
+      color: #000;
+      margin-top: 20px;
+    }
+
+    .register-arrow {
+      font-size: 36px;
+      margin-left: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      padding: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border-radius: 100px;
+      padding: 40px;
+      color: #000;
+      box-sizing: border-box;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+
+    .site-header nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .site-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #000;
+      font-size: 22px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .pink {
+      background-color: #fddad3;
+    }
+
+    .pink h1 {
+      font-size: 44px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .pink p {
+      font-size: 24px;
+      text-align: center;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .pink h2 {
+      font-size: 42px;
+      color: #000;
+      margin: 0;
+      line-height: 1.6;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .green {
+      background-color: #c9f25d;
+    }
+
+    .blue {
+      background-color: #004cff;
+      color: white;
+      text-align: center;
+    }
+
+    .blue h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .icons-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+    }
+
+    .get-icons-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .orange {
+      background-color: #e4b281;
+    }
+
+    .highlight {
+      color: #004cff;
+    }
+
+    .logo-title {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 100px;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 100px;
+    }
+
+    .event-title h2 {
+      font-size: 34px;
+      color: #000;
+      margin: 0;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .event-details {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .event-details p {
+      font-size: 24px;
+      color: #000;
+      margin: 5px 0;
+      line-height: 1.4;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .event-details strong {
+      font-weight: bold;
+    }
+
+    .orange h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .orange .italic-text {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .image-button-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .image-button-wrapper img {
+      width: 300px;
+    }
+
+    .register-button {
+      width: 300px;
+      margin-top: 16px;
+    }
+
+    .orange .register-button {
+      display: block;
+      background-color: #004cff;
+      color: white;
+      padding: 16px 0;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: 500;
+      width: 100%;
+      margin-top: 20px;
+      text-decoration: none;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .orange .register-button:hover {
+      background-color: #0033cc;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 40px 20px;
+      }
+
+      .hero-title {
+        font-size: 48px;
+      }
+
+      .hero-subtitle {
+        font-size: 22px;
+      }
+
+      .countdown-container {
+        font-size: 24px;
+        padding: 15px 30px;
+      }
+
+      .register-prompt {
+        font-size: 20px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 24px;
+      }
+
+      .card {
+        border-radius: 40px;
+        padding: 30px 20px;
+      }
+
+      .pink h1,
+      .pink h2,
+      .orange h1,
+      .event-title h2,
+      .blue h2 {
+        font-size: 28px;
+      }
+
+      .pink p,
+      .event-details p,
+      .orange .italic-text {
+        font-size: 18px;
+      }
+
+      .orange .register-button {
+        font-size: 18px;
+      }
+
+      .icons-section {
+        height: auto;
+        margin-top: 20px;
+      }
+
+      .get-icons-image {
+        max-height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+     <nav>
+      <a href="#" class="nav-link">Qbit Crew</a>
+      <a href="#" class="nav-link">Home</a>
+    </nav>
+  </header>
+
+  <!-- New Hero Section -->
+  <section class="hero-section">
+    <h1 class="hero-title">☕ COFFEE & VIBE CODE @ STARBUCKS</h1>
+    <p class="hero-subtitle">This whole idea and execution is <span class="highlight-green">just 48 hours old.</span></p>
+    
+    <div class="countdown-container" id="countdown">
+      1d 19h 32m 18s
+    </div>
+    
+    <p class="register-prompt"><a href="https://forms.gle/V8jGkDEzAPScRcSL8" style="text-decoration: none; color: inherit;">So register quick <span class="register-arrow">→</span></a></p>
+  </section>
+
+  <div class="container">
+    <div class="card pink">
+      <h1><span class="highlight">No Code?</span> No Problem</h1><br>
+      <h2>Vibe Coding</h2><br>
+      <p>Build your first AI-powered MVP —</p>
+      <p>online & offline</p>
+    </div>
+
+    <div class="card green">
+      <div class="logo-title">
+        <img src="c2.jpeg" alt="Starbucks Logo" class="logo">
+        <div class="event-title">
+          <h2>COFFEE & CODE<br>@ STARBUCKS</h2>
+        </div>
+      </div>
+      <div class="event-details">
+        <p>Vittal Mallya Road, Bangalore</p>
+        <p>May 31 – June 1, 2025</p>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <h2>WHAT YOU'LL GET</h2>
+      <div class="icons-section">
+        <img src="c33.png" alt="Custom Swag Kit, Certificate, Shoutout on Socials" class="get-icons-image">
+      </div>
+    </div>
+
+    <div class="card orange">
+      <h1>Let's jam with the right vibe</h1>
+      <div class="image-button-wrapper">
+        <img src="c44.png" alt="Team Collaboration" class="get-icons-image" />
+        <a href="https://forms.gle/V8jGkDEzAPScRcSL8" class="register-button">Register Here</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Optional: Add a real countdown timer
+    function updateCountdown() {
+      const eventDate = new Date('2025-05-31T00:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+    }
+
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
+  </script>
+</body>
+</html>

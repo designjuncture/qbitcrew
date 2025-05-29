@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-qbitcrew2025-dev-ac2a4-authRole",
+      "UnauthRoleArn": "arn:aws:iam::557722741256:role/amplify-qbitcrew2025-dev-ac2a4-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::557722741256:role/amplify-qbitcrew2025-dev-ac2a4-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-qbitcrew2025-dev-ac2a4-deployment",
+      "UnauthRoleName": "amplify-qbitcrew2025-dev-ac2a4-unauthRole",
+      "StackName": "amplify-qbitcrew2025-dev-ac2a4",
+      "StackId": "arn:aws:cloudformation:ap-south-1:557722741256:stack/amplify-qbitcrew2025-dev-ac2a4/654aede0-3cb2-11f0-8b6c-0a2869494671",
+      "AmplifyAppId": "d2nibeyz4bvcrg"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2nibeyz4bvcrg",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

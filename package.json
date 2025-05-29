@@ -1,0 +1,12 @@
+{
+  "name": "qbitcrew2025",
+  "version": "1.0.0",
+  "description": "Qbit Crew Event Website",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r *.html *.css *.png *.jpeg dist/",
+    "start": "serve dist"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 
